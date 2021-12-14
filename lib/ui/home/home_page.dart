@@ -29,8 +29,21 @@ class HomePage extends HookConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(articles[index].user.id,
-                        style: const TextStyle(fontSize: 12)),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.network(
+                          articles[index].user.profileImageUrl,
+                          width: 16,
+                          height: 16,
+                        ),
+                        const SizedBox(
+                          width: 2,
+                        ),
+                        Text('@' + articles[index].user.id,
+                            style: const TextStyle(fontSize: 12)),
+                      ],
+                    ),
                     const SizedBox(
                       height: 4,
                     ),
