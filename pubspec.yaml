@@ -37,6 +37,10 @@ dependencies:
   dio: ^4.0.4 # Retrofitの内部で使っている。okhttp的な？
   freezed: ^1.1.0 # immutableなクラスが作れる。copyWith等の自動生成。json_serializationと組み合わせることでのfromJson/toJsonの自動生成。
   freezed_annotation: ^1.1.0 # freezedを使うためのアノテーションが入っているパッケージ。
+  flutter_hooks: ^0.18.1
+  hooks_riverpod: ^1.0.2
+  state_notifier: ^0.7.1
+
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -2,6 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter_qiita_retrofit/data/client/api_client.dart';
 import 'package:flutter_qiita_retrofit/data/model/article.dart';
 import 'package:flutter_qiita_retrofit/data/response/result.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+final articleRepositoryProvider = Provider((ref) => ArticleRepositoryImpl());
 
 abstract class ArticleRepository {
   Future<Result<List<Article>>> fetchArticles();
