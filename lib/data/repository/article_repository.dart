@@ -10,7 +10,8 @@ abstract class ArticleRepository {
   Future<Result<List<Article>>> fetchArticles();
 }
 
-class ArticleRepositoryImpl with ArticleRepository {
+// with: Mixin。指定したクラスが持つクラスをまとめて追加する。
+class ArticleRepositoryImpl implements ArticleRepository {
   ArticleRepositoryImpl(this._reader);
 
   final Reader _reader;
