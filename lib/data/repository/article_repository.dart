@@ -13,8 +13,9 @@ abstract class ArticleRepository {
 class ArticleRepositoryImpl with ArticleRepository {
   final ApiClient _client;
 
-  ArticleRepositoryImpl([ApiClient? client])
-      : _client = client ?? ApiClient(Dio());
+  //:でコンストラクタのリダイレクトをしている。
+  ArticleRepositoryImpl([ApiClient? client]) // []: オプション引数。渡さなくてもよくなる。(Nullableなのにオプションにしているのは、呼び出し側でnullを渡す必要をなくすため。)
+      : _client = client ?? ApiClient(Dio()); // ??: clientがnullじゃなかったらclientを、nullだったらApiClient(Dio())を使う。
 
   @override
   Future<Result<List<Article>>> fetchArticles() {
